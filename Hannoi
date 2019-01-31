@@ -1,0 +1,15 @@
+def hannoi(n,a,b,c):
+    if n==1:
+        print(a,'-->',c)
+    else:
+        hannoi(n-1,a,c,b)
+        hannoi(1,a,b,c)
+        hannoi(n-1,b,a,c)
+
+n=int(input('请输入盘子的个数： '))
+a=input("第一个柱子的名称为：")
+b=input("第二个柱子的名称为： ")
+c=input("第三个柱子的名称为： ")
+
+print("盘子从{}移到{}的步骤为：".format(a,c))
+hannoi(n,a,b,c)
